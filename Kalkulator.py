@@ -8,6 +8,8 @@ og alt dette legges til slutt i databasen."""
 from database import db
 from database import c
 
+
+
 #en loop som passer på at det minst er to tall
 kalk=1
 for kalk in range(2):

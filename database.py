@@ -1,11 +1,22 @@
 import mysql.connector
+from getpass import getpass
+from getpass import getpass
+from mysql.connector import connect
+from mysql.connector import Error
 
 
-db=mysql.connector.connect(
-user="root",
-host="127.0.0.1",
-password="Ullmann02",
-port="3306",
-database="kalkulator")
-c=db.cursor()
 
+try:
+    db=mysql.connector.connect(
+        host="localhost",
+        user=input("Tast inn brukernavn"),
+        password = getpass("Tast inn  passord: "),
+        database="kalkulator")
+
+except Error as e:
+    print(e)
+
+except Error as e:
+    print(e)
+
+c = db.cursor()
